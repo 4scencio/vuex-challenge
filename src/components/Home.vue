@@ -2,7 +2,7 @@
   <div id="app">
     <div class="container">
       <transition mode="out-in">
-        <component :is="$currentComponent" />
+        <component :is='$currentComponent' />
       </transition>
     </div>
   </div>
@@ -10,12 +10,11 @@
 
 <script>
 import FaqCategories from "./FaqCategories";
+import Questions from './Questions';
 
 export default {
   name: "Home",
-  components: {
-    FaqCategories,
-  },
+  components: { FaqCategories, Questions },
   computed: {
     $currentComponent() {
       return this.$store.getters.$currentComponent;
@@ -36,6 +35,7 @@ export default {
 }
 
 .faq {
+  padding: 2rem .250rem;
   background: rgb(63, 68, 82);
   background: radial-gradient(
     circle,
@@ -46,8 +46,8 @@ export default {
   font-size: 13px;
   text-align: center;
   border-radius: 15px;
-  width: 350px;
-  height: 550px;
+  width: 305px;
+  height: 29.839rem;
   box-shadow: 0px 8px 21px 3px rgba(0, 0, 0, 0.19);
 }
 </style>

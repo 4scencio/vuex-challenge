@@ -1,10 +1,14 @@
 <template>
   <div class="container">
     <div class="faq">
-      <img alt="Logo" src="../assets/images/astronaut.svg" />
-      <h1>Perguntas Frequentes</h1>
-      <span>Escolha a categoria desejada:</span>
-      <br /><br /><br /><br />
+        <div class="image-heading">
+            <img alt="Logo" src="../assets/images/astronaut.svg" />
+        </div>
+        <div class="text-heading">
+            <h1 style="margin-bottom: 5px;">Perguntas frequentes</h1>
+            <span style="font-size: 0.830rem">Escolha a categoria desejada</span>
+        </div>
+      <br /><br />
       <div class="heading">
         <ul class="categories">
           <li
@@ -62,11 +66,11 @@ li {
 }
 
 h1 {
-  font-size: 26px;
+  font-size: 1.25rem;
 }
 
 span {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .container {
@@ -80,6 +84,7 @@ span {
 }
 
 .faq {
+  padding: 2rem .250rem;
   background: rgb(63, 68, 82);
   background: radial-gradient(
     circle,
@@ -90,8 +95,8 @@ span {
   font-size: 13px;
   text-align: center;
   border-radius: 15px;
-  width: 350px;
-  height: 550px;
+  width: 305px;
+  height: 29.839rem;
   box-shadow: 0px 8px 21px 3px rgba(0, 0, 0, 0.19);
 }
 
@@ -118,5 +123,17 @@ span {
 
 .category-item:hover {
   background-color: #3f4452;
+}
+
+.image-heading {
+    width: 242px;
+    margin: auto;
+}
+
+.text-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 2.1rem;
 }
 </style>
