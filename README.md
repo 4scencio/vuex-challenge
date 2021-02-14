@@ -1,24 +1,3 @@
-# vuex-challenge
+# This project was carried out to complete the proposed challenge:
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Create a question and answer FAQ with Vue, using Vuex, transitions and componentization.
