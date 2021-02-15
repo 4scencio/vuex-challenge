@@ -6,7 +6,6 @@ export default createStore({
     faqAllCategories: [],
     faqSingleCategory: [],
     faqSingleQuestion: [],
-    faqSingleAnswer: [],
     transition: '',
     currentComponent: 'FaqCategories'
   },
@@ -19,9 +18,6 @@ export default createStore({
     },
     SET_FAQ_SINGLE_QUESTION(state, payload) {
       state.faqSingleQuestion = payload
-    },
-    SET_FAQ_SINGLE_ANSWER(state, payload) {
-      state.faqSingleAnswer = payload
     },
     SET_CURRENT_COMPONENT(state, payload) {
       state.currentComponent = payload
@@ -41,9 +37,6 @@ export default createStore({
     getSingleQuestion(context, payload) {
       context.commit('SET_FAQ_SINGLE_QUESTION', payload)
     },
-    getSingleAnswer(context, payload) {
-      context.commit('SET_FAQ_SINGLE_ANSWER', payload)
-    },
     changeCurrentComponent(context, payload) {
       context.commit('SET_CURRENT_COMPONENT', payload)
     },
@@ -60,9 +53,6 @@ export default createStore({
     },
     $singleQuestion(state) {
       return state.faqSingleQuestion
-    },
-    $singleAnswer(state) {
-      return state.faqSingleAnswer
     },
     $currentComponent(state) {
       return state.currentComponent

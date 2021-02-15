@@ -15,6 +15,7 @@
         class="heading"
         v-for="question in $singleCategory.questions"
         :key="question.id"
+        @click="goToQuestion(question)"
       >
         <ul class="categories">
           <li class="category-item">
@@ -41,6 +42,11 @@ export default {
     backCategories() {
       this.$store.dispatch('changeCurrentComponent', 'FaqCategories')
       this.$store.dispatch('changeTransition', 'right')
+    },
+    goToQuestion(question) {
+      this.$store.dispatch('changeCurrentComponent', 'Answers')
+      this.$store.dispatch('getSingleQuestion', question)
+      this.$store.dispatch('changeTransition', 'left')
     }
   },
 };

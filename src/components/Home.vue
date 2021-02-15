@@ -11,10 +11,11 @@
 <script>
 import FaqCategories from "./FaqCategories";
 import Questions from './Questions';
+import Answers from './Answers';
 
 export default {
   name: "Home",
-  components: { FaqCategories, Questions },
+  components: { FaqCategories, Questions, Answers },
   computed: {
     $currentComponent() {
       return this.$store.getters.$currentComponent;
