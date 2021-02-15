@@ -7,6 +7,7 @@ export default createStore({
     faqSingleCategory: [],
     faqSingleQuestion: [],
     faqSingleAnswer: [],
+    transition: '',
     currentComponent: 'FaqCategories'
   },
   mutations: {
@@ -24,6 +25,9 @@ export default createStore({
     },
     SET_CURRENT_COMPONENT(state, payload) {
       state.currentComponent = payload
+    },
+    SET_TRANSITION(state, payload) {
+      state.transition = payload
     }
   },
   actions: {
@@ -42,6 +46,9 @@ export default createStore({
     },
     changeCurrentComponent(context, payload) {
       context.commit('SET_CURRENT_COMPONENT', payload)
+    },
+    changeTransition(context, payload) {
+      context.commit('SET_TRANSITION', payload)
     }
   },
   getters: {
@@ -59,6 +66,9 @@ export default createStore({
     },
     $currentComponent(state) {
       return state.currentComponent
+    },
+    $transition(state) {
+      return state.transition
     }
   }
 })

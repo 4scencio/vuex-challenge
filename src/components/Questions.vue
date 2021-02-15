@@ -40,6 +40,7 @@ export default {
     },
     backCategories() {
       this.$store.dispatch('changeCurrentComponent', 'FaqCategories')
+      this.$store.dispatch('changeTransition', 'right')
     }
   },
 };
@@ -47,72 +48,24 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-body {
-  
-  background-color: #dadce7;
-}
-
-ul,
-li {
-  list-style: none;
-  margin: auto;
-  display: list-item;
-}
-
-h1 {
-  font-size: 1.25rem;
-}
-
-h2 {
-    font-size: 1.20rem;
-}
-
-p {
-    font-size: .813rem;
-}
-
-span {
-  font-size: 1rem;
-}
-
-.container {
-  background: #dadce7; 
-  display: flex;
-  margin: auto;
-  width: 100%;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
-
 .faq {
-  padding: 2rem .250rem;
-  background: rgb(63, 68, 82);
-  background: radial-gradient(
-    circle,
-    rgba(63, 68, 82, 1) 0%,
-    rgba(38, 40, 44, 1) 90%
-  );
+  background: transparent;
+  padding: 1rem .250rem;
   color: #f5f6f8;
   font-size: 13px;
   text-align: center;
-  border-radius: 15px;
-  width: 305px;
-  height: 29.839rem;
-  box-shadow: 0px 8px 21px 3px rgba(0, 0, 0, 0.19);
 }
 
 .category-item {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  text-align: left;
+  text-align: center;
   padding: 15px;
   width: 100%;
   cursor: pointer;
   font-size: 14px;
   transition: all 0.6s;
-  margin-left: -5px;
   margin-top: 4px;
 }
 
@@ -122,7 +75,7 @@ span {
 }
 
 .category-item > span {
-  margin-left: 2em;
+  text-align: left;
 }
 
 .category-item:hover {
@@ -133,14 +86,17 @@ span {
     width: 1.5rem;
     display: flex;
     margin: auto;
+    margin-top: 10px;
 }
 
 .arrow {
   cursor: pointer;
   background-color: transparent;
   border-radius: 8px;
-  padding: 8px;
   transition: 0.2s ease-in-out;
+  padding: 5px;
+  width: 39px;
+  margin-top: 10px;
   
 }
 
@@ -159,6 +115,7 @@ span {
 
 .header {
     margin: auto;
+    margin-top: 10px;
     text-align: left;
 }
 

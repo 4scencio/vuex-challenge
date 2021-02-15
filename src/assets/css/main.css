@@ -26,3 +26,26 @@ a {
   font-weight: 700;
   font-display: block;
 }
+
+ul,
+li {
+  list-style: none;
+  margin: auto;
+  display: list-item;
+}
+
+h1 {
+  font-size: 1.25rem;
+}
+
+h2 {
+    font-size: 1.20rem;
+}
+
+p {
+    font-size: .813rem;
+}
+
+span {
+  font-size: 1rem;
+}

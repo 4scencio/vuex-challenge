@@ -47,6 +47,7 @@ export default {
     goToQuestion(category) {
       this.$store.dispatch('changeCurrentComponent', 'Questions')
       this.$store.dispatch('getSingleCategory', category)
+      this.$store.dispatch('changeTransition', 'left')
     },
   }
 };
@@ -54,10 +55,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-body {
-  
-  background-color: #dadce7;
-}
+
 
 ul,
 li {
@@ -73,31 +71,12 @@ span {
   font-size: 1rem;
 }
 
-.container {
-  background: #dadce7; 
-  display: flex;
-  margin: auto;
-  width: 100%;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
-
 .faq {
-  padding: 2rem .250rem;
-  background: rgb(63, 68, 82);
-  background: radial-gradient(
-    circle,
-    rgba(63, 68, 82, 1) 0%,
-    rgba(38, 40, 44, 1) 90%
-  );
+  padding: 1rem .250rem;
   color: #f5f6f8;
   font-size: 13px;
   text-align: center;
   border-radius: 15px;
-  width: 305px;
-  height: 29.839rem;
-  box-shadow: 0px 8px 21px 3px rgba(0, 0, 0, 0.19);
 }
 
 .category-item {
