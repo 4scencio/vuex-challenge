@@ -101,7 +101,8 @@ span {
 }
 
 .category-item:hover {
-  background-color: #3f4452;
+  background-color: #45464775;
+  border-radius: 15px;
 }
 
 .image-heading {
